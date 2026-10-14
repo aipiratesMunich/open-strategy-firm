@@ -1,0 +1,10 @@
+# Café till export, H1 2026, pilot sites. Fictional data for evaluation.
+# Site A refurbished January 2026. Site C refurbished 1 April 2026. Site B not refurbished.
+site,quarter,visitors,cafe_revenue_eur,comment
+A,2026-Q1,20000,30400,
+A,2026-Q2,28000,44000,
+site b,2026-Q1,24000,"EUR 26.4k",typed by hand
+B,2026-Q2,28000,30800,
+C,2026-Q1,13000,16250,before refurbishment
+C,2026-Q2,18000,24050,
+A,2026-Q2,28000,44000,re-export

@@ -1,0 +1,16 @@
+driver,value,unit,source,low,high,note
+uncovered_pumps,31200,pumps,ERP export Dec 2025: 52% of 60000 installed pumps without contract (fictional),27000,33000,low/high = 45% and 55% uncovered share
+price,1000,EUR per pump-year,12 customer interviews plus repair-spend check (fictional),800,1200,
+take_up,0.40,share of uncovered pumps,interviews plus comparable offers after three years (fictional),0.25,0.50,weakest input
+ramp_y1,0.25,share of final take-up,ASSUMPTION: pilot-region ramp,,,
+ramp_y2,0.625,share of final take-up,ASSUMPTION: pilot-region ramp,,,
+ramp_y3,0.875,share of final take-up,ASSUMPTION: pilot-region ramp,,,
+ramp_y4,1,share of final take-up,ASSUMPTION: full take-up from 2030,,,
+delivery_cost,550,EUR per contract-year,service team cost estimate (fictional),500,650,technician time travel parts
+lost_repair_margin,50,EUR per contract-year,finance: repair margin on contracted pumps (fictional),,,
+renewal_rate,0.90,share per year,ASSUMPTION: no renewal history yet,0.80,0.95,
+cac,300,EUR per new contract,pilot region 40 contracts (fictional),250,450,
+platform_fixed_cost,1.0,EUR m per year,service plan estimate (fictional),0.8,1.3,dispatch monitoring admin
+investment,6.0,EUR m,service plan estimate (fictional),5.0,7.5,spent at start of 2027
+discount_rate,0.08,per year,ASSUMPTION: CFO to confirm hurdle rate,0.06,0.10,
+eur_per_m,1000000,EUR per EUR m,unit conversion,,,

@@ -1,0 +1,17 @@
+# Memo: Fund corporate catering and a delivery pilot in 2027
+
+*Fictional company. All figures invented for evaluation.*
+
+**To:** CEO, Brightwell Bakeries | **Decisions needed at the board meeting, 12 November 2026:** (1) fund the two moves below; (2) revisit the 2031 revenue target or the margin floor
+
+**Recommendation.** Fund two moves in the 2027 budget: (1) a corporate catering unit with a central kitchen (EUR 1.2m investment, owner: Head of Operations, launch April 2027), and (2) a twelve-month delivery pilot in the eight high-street stores with the highest order density (EUR 0.3m, owner: Head of Digital, start March 2027). Do not fund new suburban stores or franchising in 2027.
+
+**Why catering.** Office catering orders grew from 3,100 to 9,000 between 2023 and 2026 without any sales effort (sales data). Growth did not stop when office attendance settled: quarterly orders rose 24% from Q2 2025 to Q2 2026. Twelve office managers we interviewed spend a median of EUR 190 per order, and nine named slow delivery from their current supplier as the main pain. A bottom-up estimate (orders × order value) and a top-down estimate (office workers within 5 km of a store × catering spend per head) both land between EUR 2.5m and EUR 3.3m catering revenue by 2031. Base case: EUR 2.9m at a 32% contribution margin (2025 catering P&L). Catering revenue of EUR 1.6m, 2.1m, 2.5m and 2.7m in 2027 to 2030, at 32% contribution minus the central kitchen's own fixed costs (four staff and rent, EUR 0.35m a year), gives EUR 0.16m, 0.32m, 0.45m and 0.51m, so the kitchen pays back in the fourth year.
+
+**Why a delivery pilot, not a full rollout.** Online could add EUR 2.4m by 2031 in our base case of 12% annual order growth, in line with the 10% to 14% that two regional chains reported in their annual reports for their first three years; EUR 3.5m only if growth reaches 18%. The pilot stores average 38 delivery orders per day today, at a contribution of EUR 3.10 per order after platform fees and packaging. The pilot tests whether they reach 60 orders per day without lowering in-store transactions against comparable non-pilot stores; we scale only if both hold. The EUR 2.4m assumes a rollout to all 18 high-street stores from 2028 if the pilot passes (about EUR 0.6m, a separate board decision at the end of the pilot).
+
+**Why not suburban stores or franchising.** Suburban stores earn a 13.1% store margin against a 14% floor (2025 P&L). Franchising was rejected because the royalty rates in three franchise offers we requested from regional operators (6% to 8% of sales) would cut store margin below the floor.
+
+**What it adds up to.** Base case EUR 5.3m additional revenue by 2031 (catering EUR 2.9m, delivery EUR 2.4m), 8.5% growth on today's EUR 62m. That leaves a gap of about EUR 12.7m to the EUR 80m target for 2031. We also tested a 3% price increase (about EUR 1.1m, limited by two discount competitors in our region) and longer opening hours in 12 stores (about EUR 0.9m); together they close less than a quarter of the gap. So the board faces a second decision: revisit the 2031 target or the floor. We recommend revisiting the target: every option that needs a lower floor (suburban stores, franchising) also carries the weakest evidence.
+
+**What would change our view.** Catering: if fewer than 40% of current office customers sign framework agreements in the first six months. Delivery: if pilot stores stay below 50 orders per day after month six, or in-store transactions fall more than 3% against comparable stores.

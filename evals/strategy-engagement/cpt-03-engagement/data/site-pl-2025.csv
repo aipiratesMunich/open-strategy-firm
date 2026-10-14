@@ -1,0 +1,10 @@
+# Fenmoor site P&L 2025, export from finance. Fictional data for evaluation.
+# EBIT is after central overhead, allocated to sites at 6% of site revenue.
+site,revenue_eur_m,ebit_eur_m,note
+North,9.0,0.81,
+East,7.5,0.60,
+Central,6.0,0.42,
+Harbour,5.5,-330,EBIT entered in EUR k by site controller
+Mill Lane,4.0,0.08,
+Westgate,3.0,-0.53,
+TOTAL,35.0,1.05,

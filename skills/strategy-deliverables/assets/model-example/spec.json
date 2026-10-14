@@ -1,0 +1,44 @@
+{
+  "title": "Alder Pumps service-contract business case (fictional)",
+  "question": "Should Alder Pumps invest EUR 6m in a service-contract offer for its uncovered installed base? Decision rule: NPV at the hurdle rate above zero.",
+  "periods": ["start", "2027", "2028", "2029", "2030", "2031", "2032", "2033"],
+  "rows": [
+    {"name": "ramp", "unit": "share of final take-up", "expr": "pick(t, 0, ramp_y1, ramp_y2, ramp_y3, ramp_y4)"},
+    {"name": "take_up_path", "unit": "share", "expr": "take_up * ramp"},
+    {"name": "contracts", "unit": "contracts in force", "expr": "uncovered_pumps * take_up_path"},
+    {"name": "new_contracts", "unit": "contracts", "expr": "max(0, contracts - renewal_rate * prev(contracts))"},
+    {"name": "revenue", "unit": "EUR m", "expr": "contracts * price / eur_per_m"},
+    {"name": "delivery", "unit": "EUR m", "expr": "-contracts * delivery_cost / eur_per_m"},
+    {"name": "lost_margin", "unit": "EUR m", "expr": "-contracts * lost_repair_margin / eur_per_m"},
+    {"name": "contribution", "unit": "EUR m", "expr": "revenue + delivery + lost_margin"},
+    {"name": "fixed_cost", "unit": "EUR m", "expr": "-platform_fixed_cost * min(1, t)"},
+    {"name": "acquisition", "unit": "EUR m", "expr": "-new_contracts * cac / eur_per_m"},
+    {"name": "capex", "unit": "EUR m", "expr": "-investment * pick(t, 1, 0)"},
+    {"name": "net_cash_flow", "unit": "EUR m", "expr": "contribution + fixed_cost + acquisition + capex"},
+    {"name": "cumulative_cash_flow", "unit": "EUR m", "expr": "prev(cumulative_cash_flow) + net_cash_flow"},
+    {"name": "discount_factor", "unit": "factor", "expr": "(1 + discount_rate) ** -t"},
+    {"name": "discounted_cash_flow", "unit": "EUR m", "expr": "net_cash_flow * discount_factor"}
+  ],
+  "outputs": [
+    {"name": "npv", "label": "NPV at hurdle rate", "unit": "EUR m", "fn": "sum", "row": "discounted_cash_flow"},
+    {"name": "irr", "label": "IRR", "unit": "per year", "fn": "irr", "row": "net_cash_flow"},
+    {"name": "payback_period", "label": "Payback (first period cumulative cash >= 0)", "unit": "year", "fn": "payback", "row": "cumulative_cash_flow"},
+    {"name": "revenue_2030", "label": "Service revenue 2030", "unit": "EUR m", "fn": "value", "row": "revenue", "period": "2030"},
+    {"name": "contracts_2030", "label": "Contracts in force 2030", "unit": "contracts", "fn": "value", "row": "contracts", "period": "2030"}
+  ],
+  "checks": [
+    {"name": "contracts_within_uncovered_base", "expr": "uncovered_pumps - contracts", "rule": ">=0"},
+    {"name": "revenue_ties_to_contracts_times_price", "expr": "revenue * eur_per_m - contracts * price", "rule": "==0"},
+    {"name": "contribution_ties_to_parts", "expr": "contribution - revenue - delivery - lost_margin", "rule": "==0"},
+    {"name": "new_contracts_not_negative", "expr": "new_contracts", "rule": ">=0"}
+  ],
+  "scenarios": {
+    "down": {"take_up": 0.25, "price": 900, "renewal_rate": 0.85},
+    "up": {"take_up": 0.50, "cac": 250, "renewal_rate": 0.95}
+  },
+  "scenario_stories": {
+    "down": "a competitor matches 48-hour response in 2028: fewer sign-ups, price pressure, more churn",
+    "up": "reliability problems at competitors: faster sign-up through technicians, cheaper acquisition, sticky contracts"
+  },
+  "break_even": {"output": "npv", "target": 0}
+}
