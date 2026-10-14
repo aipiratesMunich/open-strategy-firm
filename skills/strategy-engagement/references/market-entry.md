@@ -155,6 +155,7 @@ Answer each with yes or no and fix every no before writing:
 - [ ] At least one aggressive incumbent reaction is modelled.
 - [ ] Sunk costs (study, hire, talks) play no role in the recommendation.
 - [ ] The ramp is compared with comparable entries, or the range is widened and the missing comparison named.
+- [ ] Money already spent (studies, trials, prior investments) is called sunk and plays no role in the decision.
 - [ ] Exit criteria and exit cost are written down before entry. Exit cost = cash burned up to the exit checkpoint (from the business case) plus wind-down cost (lease, severance, customer handover) as a flagged range; an unknown wind-down cost is an assumption, not a blank.
 - [ ] The entry is compared with the best alternative use of the same capital.
 

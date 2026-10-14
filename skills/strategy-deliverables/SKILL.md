@@ -1,6 +1,6 @@
 ---
 name: strategy-deliverables
-description: Builds the two things a strategy recommendation is judged on, the numbers and the document, to the standard of a top-tier consultancy. Builds transparent financial models and business cases (inputs, calculations and outputs separated, coherent scenarios, sensitivities with break-even values, built-in checks, a live-formula Excel file) and turns a finished argument into a board deck or one-page memo (SCQA opening, executive summary first, one message per slide, action titles, the right chart for each message, sources on every chart; renders HTML and PPTX). Use when the user asks for a business case, financial model, NPV, payback, scenario or sensitivity analysis, an Excel model, a board deck, steering committee presentation, executive summary, slides, action titles, chart choice or a one-page memo for a strategic decision. Also use for quick questions like "does this pay off?" or "quick math on this investment".
+description: Builds the numbers and the document a strategy decision is judged on, like a top-tier consultancy. Builds transparent models and business cases (scenarios, sensitivities, break-even values, checks, live-formula Excel) and turns a finished argument into a board deck or one-page memo (answer first, action titles, the right chart per message, sources; renders HTML and PPTX). Use when the user asks for a business case, financial model, NPV, payback, scenario or sensitivity analysis, an Excel model, a board deck, steering committee presentation, executive summary, slides, action titles, chart choice or a one-page memo for a strategic decision. Also use when someone wants a model tidied up, checked or made to hit a number ("NPV must come out at X", for an investment committee or CFO), for "make this into a deck", and for quick one-line investment questions ("quick one, should we open X?", "does this pay off?") that come with a few numbers.
 license: MIT
 metadata:
   version: "0.2.0"
@@ -10,6 +10,8 @@ metadata:
 # Strategy Deliverables
 
 You build the model and the document a decision is taken on. A model is good when someone who did not build it can follow, check and change it in minutes and sees which few assumptions decide the answer. A deck is good when the answer comes first, every page proves one point, and the titles alone tell the story. You do not invent numbers to fill either.
+
+**Deliver in the same reply.** Never stop to ask permission for work the user already requested. If part of the request is wrong (hit a target with a plug, keep topic headings, a 20-slide board deck, an unfinished argument), say so first, refuse only that part, and still deliver everything else in this reply: the corrected model with sensitivities, or the readiness note with rewritten titles. Ending with "want me to go ahead?" is a failure.
 
 Companion skills if installed: **strategy-engagement** produces the synthesis and research you build on; **partner-review** reviews your output before it leaves.
 
@@ -53,7 +55,7 @@ For an informal question with a few numbers, answer on one screen before any ful
 1. **Contribution per unit** (order, contract, visit) from the given inputs, formula written out.
 2. **Operating break-even volume** = fixed cost per period / contribution per unit, formula written out, against the volume the user expects.
 3. **Low, base and high case** for the most uncertain driver, with the result of each and a **decision rule** ("go if pilot data shows at least X per day by month N").
-4. **Every number you added** (staff cost, trading days, discount rate, ramp, horizon) labelled `ASSUMPTION` with a reason and a range. The user's own rough estimate ("maybe 120 a day") is labelled as an unsourced estimate and tested first.
+4. **Every number you added** (staff cost, trading days, discount rate, ramp, horizon) in a table: `| Assumption | Value used | Reason | Range |`, none left out. The user's own rough estimate ("maybe 120 a day") is labelled as an unsourced estimate and tested first.
 5. **Effects the user did not mention** that could flip the answer (cannibalisation of existing sales, one-off costs, fee changes), flagged as items to check, without invented figures.
 6. **The cheapest evidence** that would settle the deciding driver.
 
@@ -67,7 +69,7 @@ Ask (in one message, only what is missing): what decision does the model support
 
 ### A2. Driver tree
 
-From each output down to inputs (volume × price, contracts × contribution, take-up and churn). Every leaf is an input, every node a line item. Targets typed in as results are not allowed. If the user asks you to hit a target, or an existing model reaches one through a plug or hard-coded number, refuse that part and finish the rest in the same reply: rebuild without the plug; report the as-built output, the effect of each fix on its own and the corrected output; show what each top driver would have to be to reach the target and whether that is plausible; run A5 to A8; write the sentence the decision maker should hear.
+From each output down to inputs (volume × price, contracts × contribution, take-up and churn). Every leaf is an input, every node a line item. Targets typed in as results are not allowed. If the user asks you to hit a target, or an existing model reaches one through a plug or hard-coded number, refuse that part and finish the rest in the same reply: rebuild without the plug; report the as-built output, the effect of each fix on its own and the corrected output; show what each top driver would have to be to reach the target and whether that is plausible; run A5 to A8. The reply must contain: as-built and corrected output side by side with the share the plug carried; a sensitivity table with break-even values and a down and up case; what would have to be true to reach the target and whether that is plausible; a recommendation to tell the decision makers (CFO, investment committee) the corrected figure, with the exact sentence for the deck.
 
 ### A3. Inputs with evidence
 
@@ -155,7 +157,7 @@ Write `06-deck.md` (format below; full example in `assets/deck-spec-example.md`)
 
 Run `python3 scripts/render_deck.py 06-deck.md --titles` (or read the `##` headings): the titles alone must tell the story. Tie every executive-summary number to its section page and the model. Then run `python3 scripts/render_deck.py 06-deck.md`: it warns about missing sources, label-like titles, charts that do not fit the message and waterfalls that do not add up, and writes a self-contained `06-deck.html` (arrow keys, `t` titles view, `n` notes, print to PDF one slide per page) and, with python-pptx installed, `06-deck.pptx` with native charts. Fix every warning or state why it stands.
 
-For a memo set `format: memo`; the script renders one printable page.
+For a memo set `format: memo`; the script renders one printable page. A memo states in one line why it is a memo (one decision, few readers, read on a phone), names the cause behind the recommendation and what would change the answer, and ends with a decision request whose owner and date are marked as proposed if the input gave none.
 
 ### B8. Self-check
 

@@ -124,7 +124,7 @@ Do phases 2 and 3 in one pass without asking for more data, then present:
 
 ## Quick case
 
-Run the playbook steps 1 to 5 in one pass: sharpen the question (ask only what is missing, in one round), instantiate the tree, run the deciding analyses on the data given, tick every trap check, write the answer page.
+Run the playbook steps 1 to 5 in one pass: sharpen the question (ask only what is missing, in one round), instantiate the tree, run the deciding analyses on the data given, tick every trap check, write the answer page. Show every playbook step as its own heading with its result, and every deciding analysis from the playbook's step 3 by name, even when the data only allows a provisional figure. Skipping a step silently is the most common failure.
 
 - Every analysis states its result and the arithmetic behind it, and ends by marking its hypothesis confirmed, killed or reshaped. If the deciding data is not in hand, name the test that would decide it (which data, compared how, who holds it) and add it to Open questions.
 - With little data, still give a provisional answer and base-case numbers built from labelled assumptions with a wide range and a weak evidence grade. Never leave a lever "not sized", an option "not costed" or the answer "not yet decidable". Exception: no valuation, price cap or walk-away price from seller-only figures.
@@ -154,11 +154,13 @@ Answer page:
 
 List the unanswered sharpening questions as the first rows of Open questions.
 
+End the answer page with **Trap checks**: every trap check from the playbook, each ticked with the evidence, or marked open with the fix.
+
 ## Research a branch
 
 1. **Restate** the hypothesis as testable: number, unit, scope, period. Write the kill criterion and the end product next to it. If no engagement exists, ask once for the hypothesis, the kill criterion, what the answer is for and what data the user can share; if they cannot state a kill criterion, propose one and mark it as yours.
 2. **Plan the evidence:** three to six decisive questions, each with sources from at least two families (client data, desk research, interviews, benchmarks) and what result would support or kill.
-3. **Collect.** With web access: primary sources first (statistics offices, regulators, filings, trade bodies, studies), secondary only to locate primary data; record source, URL, date, unit and scope for each claim; trace figures quoted by several articles to their one origin. Without web access: do not fill gaps from memory; write interview guides ([interview-guide](references/interview-guide.md)), a data request list, and mark each needed claim `ASSUMPTION` with a reason and a wide range. Never invent an interview, a quote or a respondent count.
+3. **Collect.** With web access: primary sources first (statistics offices, regulators, filings, trade bodies, studies), secondary only to locate primary data; record source, URL, date, unit and scope for each claim; trace figures quoted by several articles to their one origin. Without web access: do not fill gaps from memory. Always deliver both a data request list (what, format, why, fallback) and at least one interview guide built with [interview-guide](references/interview-guide.md) that asks about past behaviour and spend; mark each needed external claim `ASSUMPTION` with a reason and a wide range, and name the assumption that decides the verdict with its break-even value. Never invent an interview, a quote or a respondent count.
 4. **Triangulate** the two to five decisive claims ([triangulation](references/triangulation.md)): two independent approaches, an independence check, an explanation of any gap. Revealed behaviour beats stated intent; the client's own estimate is a hypothesis, not a source.
 5. **Outside view** for every forecast: what comparable companies or projects actually achieved, or a statement that no comparable was found and a wider range.
 6. **Counter-evidence:** search for the strongest evidence against and record it.

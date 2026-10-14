@@ -85,10 +85,10 @@ Every skill is tested on realistic cases: weak drafts with planted mistakes, tra
 | Skill | Cases | Runs | Runs passing every criterion | Criteria met |
 |---|---|---|---|---|
 | partner-review | 3 | 6 | 5 | 48 of 50 (96%) |
-| strategy-engagement | 24 | 48 | 19 | 420 of 472 (89%) |
-| strategy-deliverables | 6 | 12 | 5 | 102 of 118 (86%) |
+| strategy-engagement | 24 | 72 | 29 | 632 of 708 (89%) |
+| strategy-deliverables | 6 | 18 | 7 | 155 of 177 (88%) |
 
-Final run on 14 October 2026: every case twice, Claude Code with Sonnet, graded by a separate Sonnet run. The criteria are strict on purpose (a run fails if a single criterion is missed), so "criteria met" is the fairer quality measure.
+Final runs on 14 October 2026: every case two or three times, Claude Code with Sonnet, graded by a separate Sonnet run. A run fails if a single criterion is missed, so "criteria met" is the fairer quality measure. Some misses come from the agent answering without loading the skill; naming the skill avoids that.
 
 All cases and every graded run of the final evaluation, including the failures, are in [`evals/`](evals/).
 
