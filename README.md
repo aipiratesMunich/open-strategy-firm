@@ -82,9 +82,15 @@ It works without web access too: it asks you for the data and marks what it coul
 
 Every skill is tested on realistic cases: weak drafts with planted mistakes, traps it has to refuse, messy one-line briefings. Each case runs in Claude Code with only that skill installed, and a separate run grades the result against written criteria.
 
-_The final evaluation run is in progress; results will be added here._
+| Skill | Cases | Runs | Runs passing every criterion | Criteria met |
+|---|---|---|---|---|
+| partner-review | 3 | 6 | 5 | 48 of 50 (96%) |
+| strategy-engagement | 24 | 48 | 19 | 420 of 472 (89%) |
+| strategy-deliverables | 6 | 12 | 5 | 102 of 118 (86%) |
 
-All cases and every graded run, including the failures, are in [`evals/`](evals/).
+Final run on 14 October 2026: every case twice, Claude Code with Sonnet, graded by a separate Sonnet run. The criteria are strict on purpose (a run fails if a single criterion is missed), so "criteria met" is the fairer quality measure.
+
+All cases and every graded run of the final evaluation, including the failures, are in [`evals/`](evals/).
 
 ## Built by
 
