@@ -30,3 +30,4 @@ Input file: `pr-01-input.md`
 - Must: shows what "fixed" looks like in two to four sentences.
 - Must not: invent benchmark figures (e.g. "bakery chains typically grow online 12%") without a source; it may say which comparison is missing.
 - Must not: rewrite the whole document instead of reviewing it.
+- Must: at least one of the three premortem reasons is internal to the client or the team (owner or sponsor, incentives, capacity, structure, internal politics), not only market or external risks.

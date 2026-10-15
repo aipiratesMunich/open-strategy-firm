@@ -3,7 +3,7 @@ name: partner-review
 description: Red-team review of strategy and consulting work before anyone outside the team sees it. Reviews a board deck, strategy memo, business case, executive summary, issue tree, workplan or financial model the way a demanding senior partner would, from five perspectives (decision maker, logician, evidence auditor, skeptical CFO, outsider) plus a premortem, and returns a verdict (Return, Release with fixes, Release) with severity-ranked findings and the exact fix for each. Use when the user asks to review, critique, stress-test, red-team, sanity-check or "tear apart" a strategy, consulting deliverable, deck, slides, memo, recommendation, business plan or Excel model, or asks whether it is ready for the board, investors, a steering committee or a client.
 license: MIT
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   author: AI Pirates
 ---
 
@@ -61,7 +61,11 @@ For each finding record: severity, perspective, check number, location (page, sl
 
 ### Step 4: Tie the numbers
 
-Compare every number collected in step 2 across executive summary, body and model. Any mismatch on a key number is a blocker. Recompute two or three key outputs independently where the inputs are given.
+Compare every number collected in step 2 across executive summary, slides, body and model. Also check that every table sums to its stated total. Recompute two or three key outputs independently where the inputs are given.
+
+A number that the draft itself states in two places with different values beyond rounding, or a table whose stated total differs from the sum of its rows, is a **Blocker**, whatever its size and wherever it sits. Quote both values with their locations. The board cannot know which figure it approves, and every output built on it is in doubt. Calibration in step 7 never downgrades it. The fix is an instruction: name the correct figure if the draft lets you establish it; otherwise write "Reconcile <number> to one figure and rerun <the outputs built on it>".
+
+Your own recalculation is different. If a figure you derive (for example a percentage of a base) disagrees with the draft, first redo the arithmetic step by step and check which base, period and unit the draft actually uses. Show the calculation in the finding. A disagreement that survives this check is a question for the team, at most Major unless it flips the answer, and it does not go in the "Numbers that do not tie" table. A false alarm on numbers costs the partner more credibility than a missed detail.
 
 ### Step 5: Outside view
 
@@ -71,11 +75,22 @@ For every forecast, growth rate, take-up, cost saving or synergy that drives the
 
 Imagine the client followed the recommendation and it failed badly two years later. Write the three most likely reasons. Any reason the draft does not address becomes a finding (usually Major).
 
+Look inside as well as outside. Recommendations also fail from inside the client, and a premortem that lists only demand, competitors and prices has skipped the causes closest to home. At least one of the three reasons must be internal. Typical internal causes:
+
+- **No owner:** nobody senior is named, or the sponsor leaves or loses interest after approval.
+- **Incentives pull the other way:** the people who must execute are measured on something the plan hurts.
+- **Capacity the plan assumes:** people, skills or management time that are already fully used.
+- **Structure blocks it:** the change cuts across units with no one in charge of the seam.
+- **Someone loses:** a unit, region or executive gives up budget, headcount or status and will slow it down.
+- **The team's own blind spot:** the answer was fixed early and contrary evidence was explained away.
+
+If the draft says nothing about who executes the recommendation and who loses from it, that is a finding. If the draft names an owner and a budget, an internal risk it does not address is usually Minor; rate it Major only if it would plausibly stop the recommendation.
+
 ### Step 7: Consolidate and decide
 
 1. Merge duplicates and findings with one root cause across passes.
 2. Rate each finding by its consequence for the decision, then run the calibration questions from the checklist's Severity section. For every Blocker and Major, write the consequence if it stays unfixed in one concrete sentence: what the decision maker would get wrong, or which number or claim would fall. If you cannot name one, the finding is Minor. Implementation details that belong in the later plan (service levels, milestones, staffing) are Minor in a decision document. Five passes produce many findings; most are Minor. Rating inflation is a failure as serious as missing a Blocker, because it buries the problems that matter.
-3. Apply the verdict rules: any open Blocker means **Return**. Majors alone mean **Return** only if together they change the recommendation or the decision maker's confidence in it; name which and why. Otherwise **Release with fixes** (list the Majors) or **Release**. The number of Majors is not a verdict rule.
+3. Apply the verdict rules: any open Blocker means **Return**. Without an open Blocker the verdict is **Release with fixes** (list the Majors) or **Release**, however many Majors there are. If a Major would on its own make you return the draft, it is a Blocker: re-rate it and say in the consequence column why it stops the decision. Before you write the verdict, look at the "Numbers that do not tie" table: if it has a row, the verdict is **Return**.
    A Blocker needs the draft to be wrong or misleading as written: question unanswered, a key number wrong or not tying, a conclusion that does not follow, or a hidden downside that flips the answer. Missing depth, an extra analysis, or a decision the draft explicitly hands to the board is at most Major. Never rate a claim you have not verified in the text above Minor. A draft that answers the question with tied numbers, triangulated key claims and stated uncertainty normally comes back as Release with fixes.
 4. Write what is good and must survive the rewrite. A review that only destroys teaches nothing.
 5. If the verdict is Return, write the corrected governing thought or executive summary opening in two to four sentences, so the team sees what "fixed" looks like.
@@ -122,7 +137,8 @@ Use the output format below. Order findings by severity, then by position in the
 
 - Direct and concrete. No compliments as padding, no hedging, no "you might consider".
 - Criticise the work, never the people.
-- Every problem comes with a fix the team can act on today.
+- Every problem comes with a fix the team can act on today. Write fixes as instructions ("Reconcile", "Replace", "Cut", "Add"), never as "consider" or "you may want to".
+- No "typical" ranges or benchmarks without a source, also not inside a fix. Say which comparison is missing instead.
 - If the draft is good, say so and release it. Inventing problems to look rigorous is a failure too.
 
 ## Re-review

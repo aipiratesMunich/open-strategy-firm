@@ -45,7 +45,7 @@ Run the review in five passes, each from one reviewer perspective. Each pass rea
 18. Does each slide pass slide quality red flags?
 19. Is the length right: main line short, detail in the appendix?
 
-**Closing: premortem.** Imagine the client followed the recommendation and it failed badly two years later. Write the three most likely reasons. If any of them is not addressed in the draft, raise it as a finding.
+**Closing: premortem.** Imagine the client followed the recommendation and it failed badly two years later. Write the three most likely reasons. If any of them is not addressed in the draft, raise it as a finding. At least one reason must be internal to the client or the team: no owner or a departing sponsor, incentives that pull against the plan, capacity the plan assumes but nobody has, a structure with no one in charge of the seam, a unit or executive who loses and resists, or the team's own early lock-in on its answer. A premortem with only market risks is incomplete.
 
 **Decision-quality check on the team** (for gate 3 on high-stakes recommendations): Is there a sign the team fell in love with the day-one answer, anchored on the client's own numbers, or ignored a dissenting interview? Note it if so.
 
@@ -60,11 +60,11 @@ Severity follows the consequence for the decision, not the check number:
 Calibration before the verdict:
 
 1. Merge findings that share one root cause into one finding.
-2. For each Blocker ask: "Would a demanding but fair partner stop the meeting for this?" If not, downgrade it.
+2. For each Blocker ask: "Would a demanding but fair partner stop the meeting for this?" If not, downgrade it. Exception: a number the draft itself states with two different values across pages, slides, summary or model stays a Blocker at any size. A gap between the draft and the reviewer's own recalculation is not this exception; recheck the arithmetic first. The partner does not sign a document with two values for the same figure.
 3. For each Major ask: "Would the answer or the board's confidence in it change if this were fixed?" If not, downgrade it to Minor.
 4. A request for more analysis than the decision needs is not a finding. Asking for payback on a small, reversible pilot is usually Minor; on a large, irreversible investment it is Major.
 
-Verdict rules: any open Blocker means **Return**. Majors alone mean **Return** only if together they change the recommendation or the decision maker's confidence in it; say which ones and why. Otherwise **Release with fixes** (Majors listed) or **Release**. A draft that answers the question with tied numbers, triangulated key claims and stated uncertainty should normally come back as Release with fixes.
+Verdict rules: any open Blocker means **Return**. Without an open Blocker the verdict is **Release with fixes** (Majors listed) or **Release**, however many Majors there are. A Major that would on its own stop the decision is a Blocker; re-rate it. A draft that answers the question with tied numbers, triangulated key claims and stated uncertainty should normally come back as Release with fixes.
 
 ## False alarms
 
@@ -84,7 +84,7 @@ Draft executive summary for Alder Pumps: "Our analysis of the market shows signi
 - Blocker (check 2): "Exploring" and "considering" are not actions. Name the offer, the budget, the owner, the date.
 - Major (check 10): "Customers value reliability" rests on interviews only; add the installed-base and lost-customer data.
 - Major (check 8): International expansion appears without the Poland market-share finding that killed it.
-- Premortem: "Take-up stays below 20% because sales has no incentive to sell contracts" is not addressed.
+- Premortem: "Take-up stays below 20% because sales has no incentive to sell contracts" is not addressed. Neither is "The service unit reports to the plant manager, who is measured on pump output and staffs service last."
 
 Verdict: **Return**. Rewrite the summary around "Fund a EUR 6m service offer with 48-hour response and a 4% price increase; no Poland before 2029."
 

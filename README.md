@@ -84,11 +84,13 @@ Every skill is tested on realistic cases: weak drafts with planted mistakes, tra
 
 | Skill | Cases | Runs | Runs passing every criterion | Criteria met |
 |---|---|---|---|---|
-| partner-review | 3 | 6 | 5 | 48 of 50 (96%) |
+| partner-review | 4 | 10 | 6 | 74 of 84 (88%) |
 | strategy-engagement | 24 | 72 | 29 | 632 of 708 (89%) |
 | strategy-deliverables | 6 | 18 | 7 | 155 of 177 (88%) |
 
-Final runs on 14 October 2026: every case two or three times, Claude Code with Sonnet, graded by a separate Sonnet run. A run fails if a single criterion is missed, so "criteria met" is the fairer quality measure. Some misses come from the agent answering without loading the skill; naming the skill avoids that.
+Final runs on 14 October 2026 (partner-review: 15 October, v0.2.0): every case two or three times, the good-memo case four times, Claude Code with Sonnet, graded by a separate Sonnet run. A run fails if a single criterion is missed, so "criteria met" is the fairer quality measure. Some misses come from the agent answering without loading the skill; naming the skill avoids that.
+
+partner-review v0.2.0 responds to community feedback. A reviewer reported a deck whose numbers did not foot across slides coming back as Release with a soft "consider reconciling". We could not reproduce that with Sonnet: on our new test deck the previous version also returned it. The rule is now explicit anyway: a figure the draft states twice with different values is a Blocker and forces Return, and fixes are written as instructions. The premortem must now name at least one internal cause (owner, incentives, capacity, structure, politics); the new version did so in both runs, the previous version in one of two. The good-memo case remains the hardest: both the new and the previous version released it in 1 of 4 runs on 15 October, mostly because the reviewer rates one logic gap as a Blocker. All of these runs are in `evals/results/partner-review/`.
 
 All cases and every graded run of the final evaluation, including the failures, are in [`evals/`](evals/).
 
